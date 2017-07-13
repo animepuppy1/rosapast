@@ -8,23 +8,103 @@
 <body>
 
 <div id = "myDiv">
-  <input type "text" name= "baseinput" id="myText">
-  <input type= "button" value="submit" onclick="getTextInput()">
+<inpute type="text" name="baseinput" id="mytext">
+    <br/ >
+    what animal are you?
+    <br/ >
+    Would you prefer to swim or fly or climb trees?
+    <br/ >
+  Swim
+  <input type= "radio" id="radio1" name="myRadio">
+    <br/ >
+  Fly
+  <input type= "radio" id="radio2" name="myRadio">
+    <br/ >
+  Climb trees
+  <input type= "radio" id="radio3" name="myRadio">
+  <br/ >
+<br/ >
+  <br/ >
+
+
+
+  Which would you rather eat?
+  <br/ >
+  Fish
+  <input type= "radio" id="radio1" name="myRadio2">
+  <br/ >
+  Fruit
+  <input type= "radio" id="radio1" name="myRadio2">
+  <br/ >
+  Beef
+  <input type= "radio" id="radio1" name="myRadio2">
+  <br/ >
+  Salad
+  <input type= "radio" id="radio1" name="myRadio2">
+  <br/ >
+<br/ >
+<br/ >
+
+
+What is your favorite season?
+<br/ >
+Summer
+<input type= "radio" id="radio1" name="myRadio3">
+<br/ >
+Fall
+<input type= "radio" id="radio1" name="myRadio3">
+<br/ >
+Winter
+<input type= "radio" id="radio1" name="myRadio3">
+<br/ >
+Spring
+<input type= "radio" id="radio1" name="myRadio3">
+<br/ >
+<br/ >
+<br/ >
+
+
+Would you rather travell?
+<br/ >
+Alone
+<input type= "radio" id="radio1" name="myRadio4">
+<br/ >
+In group
+<input type= "radio" id="radio1" name="myRadio4">
+<br/ >
+<br/ >
+<br/ >
+
+
+  <input type= "button" value="submit" onclick="animalChoice()">
+  <input type= "">
+
+
 </div>
 
 
 <script type = "text/javascript">
 
 
-function getTextInput(){
+function animalChoice(){
   var input = document.getElementById("myText").value;
   var DessertString = "she travelled to ";
   var DessertString2 = " she attend ";
   var DessertString3 = " high school. she work at ";
   var DessertString4 = " company and she sleep at ";
+
+  if(input == "England" ||  input == "england"()){
+    document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + "Her favorite place is england !";
+  }
+  else {
+
+
   document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + DessertString+ input+  "." + DessertString2+ input + DessertString3+ input + DessertString4+ input+ ".";
 }
 
+
+
+}
 
 
 

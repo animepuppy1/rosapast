@@ -8,20 +8,19 @@
 <body>
 
 <div id = "myDiv">
-<inpute type="text" name="baseinput" id="mytext">
     <br/ >
     what animal are you?
     <br/ >
     Would you prefer to swim or fly or climb trees?
     <br/ >
   Swim
-  <input type= "radio" id="radio1" name="myRadio">
+  <input type= "radio" id="Swim" name="myRadio">
     <br/ >
   Fly
-  <input type= "radio" id="radio2" name="myRadio">
+  <input type= "radio" id="Fly" name="myRadio">
     <br/ >
   Climb trees
-  <input type= "radio" id="radio3" name="myRadio">
+  <input type= "radio" id="Climb trees" name="myRadio">
   <br/ >
 <br/ >
   <br/ >
@@ -31,16 +30,10 @@
   Which would you rather eat?
   <br/ >
   Fish
-  <input type= "radio" id="radio1" name="myRadio2">
+  <input type= "radio" id="Fish" name="myRadio2">
   <br/ >
   Fruit
-  <input type= "radio" id="radio1" name="myRadio2">
-  <br/ >
-  Beef
-  <input type= "radio" id="radio1" name="myRadio2">
-  <br/ >
-  Salad
-  <input type= "radio" id="radio1" name="myRadio2">
+  <input type= "radio" id="Fruit" name="myRadio2">
   <br/ >
 <br/ >
 <br/ >
@@ -49,16 +42,16 @@
 What is your favorite season?
 <br/ >
 Summer
-<input type= "radio" id="radio1" name="myRadio3">
+<input type= "radio" id="Summer" name="myRadio3">
 <br/ >
 Fall
-<input type= "radio" id="radio1" name="myRadio3">
+<input type= "radio" id="Fall" name="myRadio3">
 <br/ >
 Winter
-<input type= "radio" id="radio1" name="myRadio3">
+<input type= "radio" id="Winter" name="myRadio3">
 <br/ >
 Spring
-<input type= "radio" id="radio1" name="myRadio3">
+<input type= "radio" id="Spring" name="myRadio3">
 <br/ >
 <br/ >
 <br/ >
@@ -67,16 +60,16 @@ Spring
 Would you rather travell?
 <br/ >
 Alone
-<input type= "radio" id="radio1" name="myRadio4">
+<input type= "radio" id="Alone" name="myRadio4">
 <br/ >
 In group
-<input type= "radio" id="radio1" name="myRadio4">
+<input type= "radio" id="In group" name="myRadio4">
 <br/ >
 <br/ >
 <br/ >
 
 
-  <input type= "button" value="submit" onclick="animalChoice()">
+  <input type= "button" value="What animal am i?" name = "submitButton" onclick="animalChoice()">
   <input type= "">
 
 
@@ -84,31 +77,73 @@ In group
 
 
 <script type = "text/javascript">
-
-
 function animalChoice(){
-  var input = document.getElementById("myText").value;
-  var DessertString = "she travelled to ";
-  var DessertString2 = " she attend ";
-  var DessertString3 = " high school. she work at ";
-  var DessertString4 = " company and she sleep at ";
+  var dolphinScore = 0;
+  var monkeyScore = 0;
+  var birdScore = 0;
 
-  if(input == "England" ||  input == "england"()){
-    document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + "Her favorite place is england !";
+
+  if(document.getElementById("Swim").checked){
+    dolphinScore += 1;
   }
-  else {
 
+else if(document.getElementById("Fly").checked){
+  monkeyScore += 1;
+}
 
-  document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + DessertString+ input+  "." + DessertString2+ input + DessertString3+ input + DessertString4+ input+ ".";
+else if(document.getElementById("Climb trees").checked){
+  birdScore += 1;
+}
+
+if(document.getElementById("Fish").checked){
+  dolphinScore += 1;
+}
+
+else if(document.getElementById("Fruit").checked){
+  monkeyScore += 1;
+}
+
+else if(document.getElementById("Fruit").checked){
+  birdScore += 1;
+}
+
+if(document.getElementById("Summer").checked){
+  dolphinScore += 1;
+}
+
+else if(document.getElementById("Summer").checked){
+  monkeyScore += 1;
+}
+
+else if(document.getElementById("Summer").checked){
+  birdScore += 1;
+}
+
+if(document.getElementById("Alone").checked){
+  dolphinScore += 1;
+}
+
+else if(document.getElementById("In group").checked){
+  monkeyScore += 1;
+}
+
+else if(document.getElementById("In group").checked){
+  birdScore += 1;
 }
 
 
-
+if(monkeyScore > dolphinScore && monkeyScore > birdScore){
+  document.getElementById("myDiv").innerHTML += "You are a Monkey!!!"
 }
 
+if(dolphinScore > monkeyScore && dolphinScore > birdScore){
+  document.getElementById("myDiv").innerHTML += "You are a Dolphin!!!"
+}
 
-
-
+if(birdScore > dolphinScore && birdScore > monkeyScore){
+  document.getElementById("myDiv").innerHTML += "You are a Bird!!!"
+}
+}
 
 
 </script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head
+     <title>LangTrans</title>
+</head>
+<body>
+
+  <p id="food"></p>
+
+  <script type="text/javascript">
+
+      function langTrans(instring){
+        var outstring="";
+
+        for (var i=0; i<instring.length; i+=1){
+          if (instring.charAt(i)=="a"){
+            outstring +="uba";
+          }
+          else   if (instring.charAt(i)=="e"){
+              outstring +="ube";
+            }
+            else   if (instring.charAt(i)=="i"){
+                outstring +="ubi";
+              }
+              else   if (instring.charAt(i)=="o"){
+                  outstring +="ubo";
+                }
+                else   if (instring.charAt(i)=="u"){
+                    outstring +="ubu";
+                  }
+          else{
+            outstring += instring.charAt(i);
+          }
+        }
+
+        return outstring;
+      }
+
+      document.getElementById("food").innerHTML = langTrans("i am so tired");
+</script>
+
+</body>
+</html>

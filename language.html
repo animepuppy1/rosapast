@@ -5,11 +5,17 @@
 </head>
 <body>
 
+  <div id = "myDiv">
+    <input type "text" name= "baseinput" id="myText">
+    <input type= "button" value="submit" onclick="langTrans()">
+  </div>
+
   <p id="food"></p>
 
   <script type="text/javascript">
 
-      function langTrans(instring){
+      function langTrans(){
+        instring = document.getElementById("myText").value;
         var outstring="";
 
         for (var i=0; i<instring.length; i+=1){
@@ -33,10 +39,11 @@
           }
         }
 
+        document.getElementById("food").innerHTML = outstring;
         return outstring;
       }
 
-      document.getElementById("food").innerHTML = langTrans("i am so tired");
+
 </script>
 
 </body>
